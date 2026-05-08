@@ -22,3 +22,14 @@
    1. `INTERFACE` to `STATIC` in the `add_library` command
    2. Add all necessary sources to the `add_library` command
    3. `INTERFACE` to `PUBLIC` in the `target_include_directories` command (or whatever is appropriate)
+
+# Further Development
+Below is a list of ideas to guide further development:
+ - Add argument to `ty-gen-wrapper` for static library creation
+ - Support Windows (somebody who writes PS or Batch can submit a PR because I won't be doing this)
+ - Support running commands from outside of `vendor`
+ - Support building different dependencies with different build configs
+ - If `ty-gen-wrapper` is ran on an existing wrapper, error out and allow client to `--override`
+ - Clean command
+ - Support different levels of verbosity in `ty-build-all`
+ - Print out a copy and paste-able CMake line for adding to clients CMakeLists such as `list(APPEND CMAKE_PREFIX_PATH <relative path to install folder>`
