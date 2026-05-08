@@ -1,6 +1,6 @@
 # About
 
-`ty-vendor` is a simple collection of bash scripts that configure, build, and install dependencies into a folder that can easily be used with CMake's `find_package`.
+`ty-vendor` is a simple collection of bash scripts that configure, build, and install dependencies into a folder that can easily be used with CMake's `find_package`. This solution is for anybody who doesn't want to build dependencies as part of their project build (via `add_subdirectory`, `FetchContent`, etc.), doesn't want to use a heavyweight package manager (`vcpkg`, `conan`), and wants full control over retrieving and building dependencies.
 
 # Install
 
