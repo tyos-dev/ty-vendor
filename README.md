@@ -17,4 +17,8 @@
 ### ty-gen-wrapper
 *For wrapping a header only non-CMake library in an `INTERFACE` CMake library*
 1. Run `./ty-gen-wrapper.sh <lib-name>` from `vendor`.
-2. Add the library as a sub-folder of the `<lib-name>-cmake` folder that was generated. 
+2. Add the library as a sub-folder of the `<lib-name>-cmake` folder that was generated.
+3. To wrap a static library instead, within the generated `CMakeLists.txt` simply change:
+   1. `INTERFACE` to `STATIC` in the `add_library` command
+   2. Add all necessary sources to the `add_library` command
+   3. `INTERFACE` to `PUBLIC` in the `target_include_directories` command (or whatever is appropriate)
